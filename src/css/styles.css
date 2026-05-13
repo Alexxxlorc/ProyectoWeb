@@ -1,0 +1,14 @@
+/* Estilos rápidos para el carrusel y categorías */
+.carousel-item img {
+    height: 70vh; /* 70% de la altura de la pantalla */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+        
+.category-card {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+        
+.category-card:hover {
+    transform: translateY(-5px); /* Efecto de levante al pasar el mouse */
+}
