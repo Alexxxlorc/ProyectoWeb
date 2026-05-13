@@ -1,0 +1,7 @@
+{
+    "apiUrl": "https://jsonplaceholder.typicode.com",
+    "usuariosEndpoint": "/users",
+    "postsEndpoint": "/posts",
+    "timeout": 10000,
+    "reintentos": 3
+}
