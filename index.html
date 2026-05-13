@@ -3,15 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
-    crossorigin="anonymous">
-    <title>Le Parfum Quotidien</title>
+    <title>Le Parfum Quotiden</title>
+    
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<h1 class="text-center mt-5">Le Parfum Quotidien</h1>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-3" href="#">
+                    LE PARFUM QUOTIDEN
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPerfumes">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarPerfumes">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#dama">Dama</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#caballero">Caballero</a></li>
+                    </ul>
+                    
+                    <form class="d-flex ms-lg-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar perfume..." aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="carouselPrincipal" class="carousel slide carousel-fade mb-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselPrincipal" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselPrincipal" data-bs-slide-to="1"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" height="120">
+                    <video autoplay muted loop class="d-block w-100">
+                        <source src="./src/img/fer.mp4" type="video/webm" height="120">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1920" class="d-block w-100" alt="Colección Dama">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1920" class="d-block w-100" alt="Colección Caballero">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                        <h5>Elegancia Masculina</h5>
+                        <p>Aromas intensos y duraderos.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPrincipal" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselPrincipal" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <div class="container mb-5">
+            <h2 class="text-center fw-bold mb-4">Explora nuestras categorías</h2>
+            
+            <div class="row g-4 row-cols-1 row-cols-md-3">
+                <div class="col" id="dama">
+                    <div class="card h-100 category-card shadow-sm border-0 text-center">
+                        <div class="card-body py-5">
+                            <div class="display-1 text-primary mb-3">🌸</div>
+                            <h3 class="card-title fw-bold">Dama</h3>
+                            <p class="card-text text-muted">Fragancias florales, frutales y dulces.</p>
+                            <a href="#" class="btn btn-primary w-100">Ver Catálogo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col" id="caballero">
+                    <div class="card h-100 category-card shadow-sm border-0 text-center">
+                        <div class="card-body py-5">
+                            <div class="display-1 text-primary mb-3">👔</div>
+                            <h3 class="card-title fw-bold">Caballero</h3>
+                            <p class="card-text text-muted">Aromas amaderados, cítricos y especiados.</p>
+                            <a href="#" class="btn btn-primary w-100">Ver Catálogo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 category-card shadow-sm border-0 text-center">
+                        <div class="card-body py-5">
+                            <div class="display-1 text-primary mb-3">🎁</div>
+                            <h3 class="card-title fw-bold">Kits de Regalo</h3>
+                            <p class="card-text text-muted">Combinaciones perfectas para sorprender.</p>
+                            <a href="#" class="btn btn-primary w-100">Ver Opciones</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Le Parfum Quotiden. Proyecto de Práctica Frontend.</p>
+        </div>
+    </footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
