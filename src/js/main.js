@@ -73,6 +73,7 @@ function mostrarEnPantalla(perfumes) {
                             <span class="badge bg-light text-dark border font-monospace">${perfume.mililitros}ml</span>
                         </div>
                     
+                        <a href="text-center"></a>
                         <a href="detalle.html?id=${perfume.id}" class="btn btn-dark w-100 mt-3 rounded-pill py-2 small ${perfume.disponible ? '' : 'disabled'}">
                             ${perfume.disponible ? 'Ver Detalles' : 'Agotado'}
                         </a>
