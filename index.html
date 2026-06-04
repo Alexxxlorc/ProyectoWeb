@@ -9,34 +9,8 @@
     
     <link rel="stylesheet" href="./src/css/styles.css">
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-            <div class="container">
-                <a class="navbar-brand fw-bold fs-3" href="./index.html">
-                    LE PARFUM QUOTIDIEN
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPerfumes">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarPerfumes">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="./index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./dama.html">Dama</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./caballero.html">Caballero</a></li>
-                    </ul>
-                    
-                    <form class="d-flex ms-lg-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar perfume..." aria-label="Search">
-                        <button class="btn btn-outline-primary" type="submit">Buscar</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
-
+<>
+   <div id="header-placeholder"></div>
     <main>
         <div id="carouselPrincipal" class="carousel slide carousel-fade mb-5" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -86,7 +60,7 @@
                             <div class="display-1 text-primary mb-3"></div>
                             <h3 class="card-title fw-bold">Dama</h3>
                             <p class="card-text text-muted">Fragancias florales, frutales y dulces.</p>
-                            <a href="./dama.html" class="btn btn-primary w-100">Ver Catálogo</a>
+                            <a href="./src/views/dama.html" class="btn btn-primary w-100">Ver Catálogo</a>
                         </div>
                     </div>
                 </div>
@@ -97,7 +71,7 @@
                             <div class="display-1 text-primary mb-3"></div>
                             <h3 class="card-title fw-bold">Caballero</h3>
                             <p class="card-text text-muted">Aromas amaderados, cítricos y especiados.</p>
-                            <a href="./caballero.html" class="btn btn-primary w-100">Ver Catálogo</a>
+                            <a href="./src/views/caballero.html" class="btn btn-primary w-100">Ver Catálogo</a>
                         </div>
                     </div>
                 </div>
@@ -108,7 +82,7 @@
                             <div class="display-1 text-primary mb-3"></div>
                             <h3 class="card-title fw-bold">Kits de Regalo</h3>
                             <p class="card-text text-muted">Combinaciones perfectas para sorprender.</p>
-                            <a href="./kits.html" class="btn btn-primary w-100">Ver Opciones</a>
+                            <a href="./src/views/kits.html" class="btn btn-primary w-100">Ver Opciones</a>
                         </div>
                     </div>
                 </div>
@@ -119,11 +93,12 @@
     <footer class="bg-dark text-white text-center py-4 mt-auto">
         <div class="container">
             <p class="mb-0">&copy; 2026 Le Parfum Quotiden. Proyecto de Práctica Frontend.</p>
-            <a href="./login.html" style="color: rgba(255,255,255,0.3); font-size: 0.75rem;">Admin</a>
+            <a href="./src/views/login.html" style="color: rgba(255,255,255,0.3); font-size: 0.75rem;">Admin</a>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./src/js/includes.js"></script>
     <script src="./src/js/main.js"></script>
 
 </body>
