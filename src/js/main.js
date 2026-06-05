@@ -72,7 +72,7 @@ function mostrarEnPantalla(perfumes, idContenedor, esLanding) {
         const rutaImagenCorrecta = esLanding ? `./${perfume.imagen}` : `../${perfume.imagen}`;
         
         // El enlace a detalles cambia si estamos en la raíz (index) o dentro de /views/
-        const urlDetalle = esLanding ? `./src/views/producto.html?id=${perfume.id}` : `./producto.html?id=${perfume.id}`;
+        const urlDetalle = esLanding ? `./src/views/detalle.html?id=${perfume.id}` : `./detalle.html?id=${perfume.id}`;
 
         const tarjetaHTML = `
             <div class="${esLanding ? 'col' : 'col-md-4 col-sm-6'}">
