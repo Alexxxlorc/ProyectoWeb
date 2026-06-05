@@ -19,21 +19,34 @@ function cargarPerfumes() {
             
             // 1. Detectamos en qué página está el usuario leyendo la URL actual
             const rutaActual = window.location.pathname;
-            let categoriaFiltrar = "";
+            // 1. Identificación de la vista del usuario
+            // Si está en la raíz, en index.html o no especifica archivo (home en servidores de desarrollo)
+            if (rutaActual === "/" || rutaActual.includes("index.html")) {
+                
+                // Para la landing page seleccionamos productos específicos (ej: IDs del 1 al 4)
+                // Esto simula una consulta SQL de "Best Sellers" o productos destacados
+                const destacados = listaProductos.filter(p => p.id === 1 || p.id === 2 || p.id === 11 || p.id === 12);
+                
+                // Mandamos a pintar al contenedor especial de la landing page
+                mostrarEnPantalla(destacados, "productos-destacados", true);
+                
+            } else {
+                // Lógica existente para las páginas de categorías en /views/
+                let categoriaFiltrar = "";
 
-            if (rutaActual.includes("dama.html")) {
-                categoriaFiltrar = "dama";
-            } else if (rutaActual.includes("caballero.html")) {
-                categoriaFiltrar = "caballero";
-            } else if (rutaActual.includes("kits.html")) {
-                categoriaFiltrar = "kits";
+                if (rutaActual.includes("dama.html")) {
+                    categoriaFiltrar = "dama";
+                } else if (rutaActual.includes("caballero.html")) {
+                    categoriaFiltrar = "caballero";
+                } else if (rutaActual.includes("kits.html")) {
+                    categoriaFiltrar = "kits";
+                }
+
+                const productosFiltrados = listaProductos.filter(perfume => perfume.categoria === categoriaFiltrar);
+                
+                // Mandamos a pintar al contenedor por defecto de las categorías
+                mostrarEnPantalla(productosFiltrados, "contenedor-perfumes", false);
             }
-
-            // 2. Filtramos el arreglo: solo nos quedamos con los 10 de esa categoría
-            const productosFiltrados = listaProductos.filter(perfume => perfume.categoria === categoriaFiltrar);
-
-            // 3. Mandamos a pintar esos perfumes en el HTML
-            mostrarEnPantalla(productosFiltrados);
         })
         .catch(error => {
             console.error("Hubo un error al jalar los datos:", error);
@@ -41,9 +54,9 @@ function cargarPerfumes() {
 }
 
 // Función encargada de crear las tarjetas de Bootstrap e inyectarlas en el HTML
-function mostrarEnPantalla(perfumes) {
+function mostrarEnPantalla(perfumes, idContenedor, esLanding) {
     // Buscamos el contenedor <div id="contenedor-perfumes"> en tu HTML
-    const contenedor = document.getElementById("contenedor-perfumes");
+    const contenedor = document.getElementById(idContenedor);
     
     // Si la página actual no tiene ese contenedor, detenemos la función
     if (!contenedor) return;
@@ -53,42 +66,50 @@ function mostrarEnPantalla(perfumes) {
 
     // Recorremos los perfumes filtrados uno por uno
     perfumes.forEach(perfume => {
+        // CORRECCIÓN TÉCNICA DE RUTA DE ASSETS:
+        // Si estamos en la landing (raíz), la ruta "src/media/..." es directa.
+        // Si estamos dentro de la carpeta /views/, debemos anteponer "../" para subir un nivel.
+        const rutaImagenCorrecta = esLanding ? `./${perfume.imagen}` : `../${perfume.imagen}`;
         
-        // Creamos el diseño de la tarjeta utilizando tus clases de Bootstrap
+        // El enlace a detalles cambia si estamos en la raíz (index) o dentro de /views/
+        const urlDetalle = esLanding ? `./src/views/producto.html?id=${perfume.id}` : `./producto.html?id=${perfume.id}`;
+
         const tarjetaHTML = `
-            <div class="col-md-4 col-sm-6">
-                <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=400" 
-                         class="card-img-top" 
-                         alt="${perfume.nombre}" 
-                         style="height: 250px; object-fit: cover;">
-                    <div class="card-body d-flex flex-column text-center p-3">
-                        <small class="text-uppercase text-muted fw-bold mb-1 d-block" style="font-size: 0.75rem;">
-                            ${perfume.marca}
-                        </small>
-                        <h5 class="card-title fw-bold mb-1 fs-5 text-dark">${perfume.nombre}</h5>
-                        <p class="card-text text-muted small flex-grow-1 mb-2">${perfume.descripcion}</p>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <span class="fw-bold text-dark fs-5">$${perfume.precio}</span>
-                            <span class="badge bg-light text-dark border font-monospace">${perfume.mililitros}ml</span>
+            <div class="${esLanding ? 'col' : 'col-md-4 col-sm-6'}">
+                <div class="card h-100 text-center shadow-sm border-0">
+                    <div class="position-relative overflow-hidden" style="height: 280px; background-color: #fff;">
+                        <img src="${rutaImagenCorrecta}" 
+                             class="card-img-top p-3" 
+                             alt="${perfume.nombre}" 
+                             style="height: 100%; width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <h4 class="card-title h5 mb-1">${perfume.nombre}</h4>
+                            <p class="text-muted small mb-2" style="letter-spacing: 0.1em; text-transform: uppercase;">${perfume.marca}</p>
+                            <p class="card-text text-muted small mb-2 text-truncate-2">${perfume.descripcion}</p>
                         </div>
-                    
-                        <div class="d-flex gap-2 mt-3">
-    <a href="detalle.html?id=${perfume.id}" class="btn btn-dark w-100 rounded-pill py-2 small ${perfume.disponible ? '' : 'disabled'}">
-        ${perfume.disponible ? 'Ver Detalles' : 'Agotado'}
-    </a>
-    <button class="btn btn-outline-dark rounded-pill py-2 small"
-            onclick="agregarAlCarrito(${perfume.id})"
-            ${perfume.disponible ? '' : 'disabled'}>
-        🛒
-    </button>
-</div>
+                        <div class="mt-3">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="fw-normal text-dark" style="font-family: 'Inter', sans-serif;">$${perfume.precio.toLocaleString('es-MX')} MXN</span>
+                                <span class="badge bg-light text-dark border font-monospace small">${perfume.mililitros}ml</span>
+                            </div>
+                            
+                            <div class="d-flex gap-2">
+                                <a href="${urlDetalle}" class="btn ${esLanding ? 'btn-dark' : 'btn-dark'} w-100 py-2 small ${perfume.disponible ? '' : 'disabled'}">
+                                    ${perfume.disponible ? 'Descubrir' : 'Agotado'}
+                                </a>
+                                <button class="btn btn-outline-dark py-2 small"
+                                        onclick="agregarAlCarrito(${perfume.id})"
+                                        ${perfume.disponible ? '' : 'disabled'}>
+                                    🛒
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         `;
-        
-        // Inyectamos la tarjeta en el contenedor
         contenedor.innerHTML += tarjetaHTML;
     });
 }
@@ -127,7 +148,7 @@ function cargarDetallePerfume() {
             const contenedor = document.getElementById("contenedor-detalle");
             contenedor.innerHTML = `
                 <div class="col-md-5 text-center">
-                    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600" 
+                    <img src="${perfume.imagen}" 
                          class="img-fluid rounded p-3" 
                          alt="${perfume.nombre}" 
                          style="max-height: 400px; object-fit: cover;">

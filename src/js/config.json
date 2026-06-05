@@ -330,6 +330,17 @@
       "imagen": "src/media/productos/kit-212.png",
       "descripcion": "Incluye perfume 212 VIP de 100ml y un gel de ducha refrescante de 100ml.",
       "disponible": true
+    },
+    {
+      "id": 31,
+      "nombre": "212 Men Parfum",
+      "marca": "Carolina Herrera",
+      "precio": 3025,
+      "categoria": "caballero",
+      "mililitros": 100,
+      "imagen": "src/media/productos/212-men.png",
+      "descripcion": "Una fragancia pensada para el hombre sofisticado que saborea los mejores momentos de la vida.",
+      "disponible": true
     }
   ]
 }
