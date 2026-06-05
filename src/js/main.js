@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Función principal para jalar el JSON local
 function cargarPerfumes() {
     // CORRECCIÓN DE RUTA: Salimos de 'views' con '../' y entramos a 'js/config.json'
-    fetch('../js/config.json')
+    fetch('/src/js/config.json')
         .then(respuesta => {
             // Si el archivo no se encuentra, lanzamos el error para la consola
             if (!respuesta.ok) {
@@ -73,10 +73,16 @@ function mostrarEnPantalla(perfumes) {
                             <span class="badge bg-light text-dark border font-monospace">${perfume.mililitros}ml</span>
                         </div>
                     
-                        <a href="text-center"></a>
-                        <a href="detalle.html?id=${perfume.id}" class="btn btn-dark w-100 mt-3 rounded-pill py-2 small ${perfume.disponible ? '' : 'disabled'}">
-                            ${perfume.disponible ? 'Ver Detalles' : 'Agotado'}
-                        </a>
+                        <div class="d-flex gap-2 mt-3">
+    <a href="detalle.html?id=${perfume.id}" class="btn btn-dark w-100 rounded-pill py-2 small ${perfume.disponible ? '' : 'disabled'}">
+        ${perfume.disponible ? 'Ver Detalles' : 'Agotado'}
+    </a>
+    <button class="btn btn-outline-dark rounded-pill py-2 small"
+            onclick="agregarAlCarrito(${perfume.id})"
+            ${perfume.disponible ? '' : 'disabled'}>
+        🛒
+    </button>
+</div>
                     </div>
                 </div>
             </div>
@@ -106,7 +112,7 @@ function cargarDetallePerfume() {
     }
 
     // 2. Jalamos los datos de nuestro config.json
-    fetch('../js/config.json')
+    fetch('/src/js/config.json')
         .then(res => res.json())
         .then(datos => {
             // 3. Buscamos el perfume exacto que coincida con el ID de la URL
@@ -137,9 +143,7 @@ function cargarDetallePerfume() {
                     <p class="text-secondary fs-5 mb-5">${perfume.descripcion}</p>
                     
                     <div class="d-flex gap-3">
-                        <button class="btn btn-dark btn-lg px-5 rounded-pill" onclick="alert('¡Añadido exitosamente al carrito!')">
-                            Añadir al carrito
-                        </button>
+                        <button class="btn btn-dark btn-lg px-5 rounded-pill" onclick="agregarAlCarrito(${perfume.id})"> Añadir al carrito </button>
                         <a href="javascript:history.back()" class="btn btn-outline-secondary btn-lg px-4 rounded-pill">
                             Regresar
                         </a>
