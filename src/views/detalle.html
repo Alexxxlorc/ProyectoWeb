@@ -11,22 +11,9 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="bg-light">
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-            <div class="container">
-                <a class="navbar-brand fw-bold fs-3" href="../../index.html">
-                    LE PARFUM QUOTIDIEN
-                </a>
-                <div class="navbar-nav ms-auto">
-                    <!-- Botón para regresar cómodamente a la colección anterior -->
-                    <a class="nav-link border rounded-pill px-3 active" href="javascript:history.back()">
-                        ← Volver al Catálogo
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </header>
 
+    <div id="header-placeholder"></div>
+    
     <main class="container py-5 my-5">
         <div class="card shadow border-0 p-4 bg-white rounded-3">
             <!-- El JavaScript leerá el ID de la URL y pintará los datos aquí adentro -->
@@ -39,14 +26,12 @@
         </div>
     </main>
 
-    <footer class="bg-dark text-white text-center py-4 mt-auto">
-        <div class="container">
-            <p class="mb-0">&copy; 2026 Le Parfum Quotiden. Proyecto de Práctica Frontend.</p>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Vinculamos tu main.js para que haga la magia al cargar esta página -->
+    <script src="../js/includes.js"></script>
+    <script src="../js/utils.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>

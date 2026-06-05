@@ -68,3 +68,35 @@ function mostrarAlerta(mensaje, tipo = 'success') {
 function slugify(texto) {
     return texto.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
 }
+
+function agregarAlCarrito(id) {
+    fetch('/src/js/config.json')
+        .then(res => res.json())
+        .then(datos => {
+            const producto = datos.productos.find(p => p.id === id);
+            if (producto) {
+                let cart = getCart();
+                const existe = cart.find(item => item.id === producto.id);
+                if (existe) {
+                    existe.cantidad += 1;
+                } else {
+                    cart.push({ ...producto, cantidad: 1 });
+                }
+                saveCart(cart);
+                actualizarContador();
+                mostrarAlerta('Producto agregado al carrito', 'success');
+            }
+        });
+}
+
+function actualizarContador() {
+    const cart = getCart();
+    const total = cart.reduce((sum, item) => sum + item.cantidad, 0);
+    const contador = document.getElementById('contadorCarrito');
+    if (contador) {
+        contador.textContent = total > 0 ? `(${total})` : '';
+    }
+}
+
+// Actualizar contador al cargar cualquier página
+document.addEventListener('DOMContentLoaded', actualizarContador);
