@@ -69,7 +69,7 @@ function mostrarEnPantalla(perfumes, idContenedor, esLanding) {
         // CORRECCIÓN TÉCNICA DE RUTA DE ASSETS:
         // Si estamos en la landing (raíz), la ruta "src/media/..." es directa.
         // Si estamos dentro de la carpeta /views/, debemos anteponer "../" para subir un nivel.
-        const rutaImagenCorrecta = esLanding ? `./${perfume.imagen}` : `../${perfume.imagen}`;
+        const rutaImagenCorrecta = esLanding ? `./src/${perfume.imagen}` : `../${perfume.imagen}`;
         
         // El enlace a detalles cambia si estamos en la raíz (index) o dentro de /views/
         const urlDetalle = esLanding ? `./src/views/detalle.html?id=${perfume.id}` : `./detalle.html?id=${perfume.id}`;
@@ -146,9 +146,11 @@ function cargarDetallePerfume() {
 
             // 4. Inyectamos la información estructurada en el HTML en dos columnas organizadas
             const contenedor = document.getElementById("contenedor-detalle");
+            // Ajustamos la ruta de imagen para detalle.html (está en /views/)
+            const rutaImagenDetalle = `../${perfume.imagen}`;
             contenedor.innerHTML = `
                 <div class="col-md-5 text-center">
-                    <img src="${perfume.imagen}" 
+                    <img src="${rutaImagenDetalle}" 
                          class="img-fluid rounded p-3" 
                          alt="${perfume.nombre}" 
                          style="max-height: 400px; object-fit: cover;">

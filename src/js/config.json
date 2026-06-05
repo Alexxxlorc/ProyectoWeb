@@ -8,7 +8,7 @@
       "precio": 2950,
       "categoria": "caballero",
       "mililitros": 100,
-      "imagen": "src/media/productos/sauvage.png",
+      "imagen": "img/sauvage.jpg",
       "descripcion": "Fragancia radicalmente fresca, ruda y noble a la vez.",
       "disponible": true
     },
@@ -19,7 +19,7 @@
       "precio": 3200,
       "categoria": "caballero",
       "mililitros": 100,
-      "imagen": "src/media/productos/bleu.png",
+      "imagen": "img/bleu.jpg",
       "descripcion": "Un elogio a la libertad masculina en una fragancia aromática y amaderada.",
       "disponible": true
     },
@@ -30,7 +30,7 @@
       "precio": 2600,
       "categoria": "caballero",
       "mililitros": 100,
-      "imagen": "src/media/productos/acqua.png",
+      "imagen": "img/acqua.jpg",
       "descripcion": "Fragancia mítica, fresca y acuática que evoca el mar y el viento.",
       "disponible": true
     },
@@ -41,7 +41,7 @@
       "precio": 2450,
       "categoria": "caballero",
       "mililitros": 100,
-      "imagen": "src/media/productos/one-million.png",
+      "imagen": "img/onemillon.jpg",
       "descripcion": "El aroma del éxito. Una combinación audaz de cuero y mandarina.",
       "disponible": true
     },
@@ -52,7 +52,7 @@
       "precio": 2300,
       "categoria": "caballero",
       "mililitros": 100,
-      "imagen": "src/media/productos/eros.png",
+      "imagen": "img/eros.jpg",
       "descripcion": "Aroma fresco, oriental y amaderado inspirado en la mitología griega.",
       "disponible": true
     },
@@ -63,7 +63,7 @@
       "precio": 2550,
       "categoria": "caballero",
       "mililitros": 125,
-      "imagen": "src/media/productos/le-male.png",
+      "imagen": "img/le-male.jpg",
       "descripcion": "Tan viril como sexy, rinde homenaje a la figura del marinero.",
       "disponible": true
     },
@@ -74,7 +74,7 @@
       "precio": 2400,
       "categoria": "caballero",
       "mililitros": 100,
-      "imagen": "src/media/productos/212-vip.png",
+      "imagen": "img/212-vip.jpg",
       "descripcion": "Fragancia de actitud y seducción, inspirada en las fiestas de Nueva York.",
       "disponible": true
     },
@@ -85,7 +85,7 @@
       "precio": 2450,
       "categoria": "caballero",
       "mililitros": 100,
-      "imagen": "src/media/productos/invictus.png",
+      "imagen": "img/invictus.jpg",
       "descripcion": "El aroma de la victoria. Notas marinas y madera de guayacán.",
       "disponible": true
     },
@@ -96,7 +96,7 @@
       "precio": 2200,
       "categoria": "caballero",
       "mililitros": 125,
-      "imagen": "src/media/productos/light-blue-homme.png",
+      "imagen": "img/light-blue-homme.jpg",
       "descripcion": "La esencia de la alegría de vivir y de la seducción mediterránea.",
       "disponible": true
     },
@@ -107,7 +107,7 @@
       "precio": 2150,
       "categoria": "caballero",
       "mililitros": 100,
-      "imagen": "src/media/productos/boss-bottled.png",
+      "imagen": "img/boss-bottled.jpg",
       "descripcion": "Un aroma elegante, sofisticado con notas de manzana roja y canela.",
       "disponible": true
     },
@@ -118,7 +118,7 @@
       "precio": 2850,
       "categoria": "dama",
       "mililitros": 100,
-      "imagen": "src/media/productos/la-vie.png",
+      "imagen": "img/la-vie.jpg",
       "descripcion": "Una declaración universal a la belleza de la vida con notas de iris.",
       "disponible": true
     },
@@ -129,7 +129,7 @@
       "precio": 3100,
       "categoria": "dama",
       "mililitros": 80,
-      "imagen": "src/media/productos/good-girl.png",
+      "imagen": "img/good-girl.jpg",
       "descripcion": "Audaz y sofisticada, una fragancia inspirada en la dualidad de la mujer.",
       "disponible": true
     },
@@ -140,7 +140,7 @@
       "precio": 3500,
       "categoria": "dama",
       "mililitros": 100,
-      "imagen": "src/media/productos/chanel-5.png",
+      "imagen": "img/chanel-5.jpg",
       "descripcion": "El clásico de los clásicos. Un perfume abstracto, floral y eterno.",
       "disponible": true
     },
@@ -151,7 +151,7 @@
       "precio": 3200,
       "categoria": "dama",
       "mililitros": 100,
-      "imagen": "src/media/productos/jadore.png",
+      "imagen": "img/jadore.jpg",
       "descripcion": "Un ramo inventado al detalle, como una flor hecha a la medida.",
       "disponible": true
     },
@@ -162,7 +162,7 @@
       "precio": 2900,
       "categoria": "dama",
       "mililitros": 90,
-      "imagen": "src/media/productos/black-opium.png",
+      "imagen": "img/black-opium.jpg",
       "descripcion": "Una fragancia electrizante y sensual con notas de café negro y vainilla.",
       "disponible": true
     },
@@ -173,7 +173,7 @@
       "precio": 2850,
       "categoria": "dama",
       "mililitros": 90,
-      "imagen": "src/media/productos/mon-paris.png",
+      "imagen": "img/mon-paris.jpg",
       "descripcion": "La expresión frutal y floral del amor moderno, inspirado en París.",
       "disponible": true
     },
@@ -184,7 +184,7 @@
       "precio": 3400,
       "categoria": "dama",
       "mililitros": 100,
-      "imagen": "src/media/productos/coco-mademoiselle.png",
+      "imagen": "img/coco-mademoiselle.jpg",
       "descripcion": "La esencia de una mujer libre y audaz. Un carácter fuerte y fresco.",
       "disponible": true
     },
@@ -195,7 +195,7 @@
       "precio": 2350,
       "categoria": "dama",
       "mililitros": 100,
-      "imagen": "src/media/productos/light-blue-dama.png",
+      "imagen": "img/light-blue-dama.jpg",
       "descripcion": "Fresco, floral y frutal, evoca los días soleados del verano mediterráneo.",
       "disponible": true
     },
@@ -206,7 +206,7 @@
       "precio": 2250,
       "categoria": "dama",
       "mililitros": 90,
-      "imagen": "src/media/productos/bright-crystal.png",
+      "imagen": "img/bright-crystal.jpg",
       "descripcion": "Una joya de fragancia con acordes florales, vibrantes y transparentes.",
       "disponible": true
     },
@@ -217,7 +217,7 @@
       "precio": 2650,
       "categoria": "dama",
       "mililitros": 100,
-      "imagen": "src/media/productos/ch-dama.png",
+      "imagen": "img/ch-dama.jpg",
       "descripcion": "Un toque final invisible, el equilibrio perfecto entre confort y frescura.",
       "disponible": true
     },
@@ -228,7 +228,7 @@
       "precio": 3600,
       "categoria": "kits",
       "mililitros": 110,
-      "imagen": "src/media/productos/kit-sauvage.png",
+      "imagen": "img/kit-sauvage.jpg",
       "descripcion": "Incluye Sauvage Eau de Parfum de 100ml y un spray de viaje recargable de 10ml.",
       "disponible": true
     },
@@ -239,7 +239,7 @@
       "precio": 3750,
       "categoria": "kits",
       "mililitros": 100,
-      "imagen": "src/media/productos/kit-good-girl.png",
+      "imagen": "img/kit-good-girl.jpg",
       "descripcion": "Incluye perfume Good Girl de 80ml y una crema corporal perfumada de 200ml.",
       "disponible": true
     },
@@ -250,7 +250,7 @@
       "precio": 2950,
       "categoria": "kits",
       "mililitros": 200,
-      "imagen": "src/media/productos/kit-one-million.png",
+      "imagen": "img/kit-one-million.jpg",
       "descripcion": "Incluye One Million EDT de 100ml y un desodorante en spray de 150ml.",
       "disponible": true
     },
@@ -261,7 +261,7 @@
       "precio": 3400,
       "categoria": "kits",
       "mililitros": 160,
-      "imagen": "src/media/productos/kit-la-vie.png",
+      "imagen": "img/kit-la-vie.jpg",
       "descripcion": "Incluye perfume de 100ml, gel de ducha de 50ml y loción corporal de 50ml.",
       "disponible": true
     },
@@ -272,7 +272,7 @@
       "precio": 3100,
       "categoria": "kits",
       "mililitros": 175,
-      "imagen": "src/media/productos/kit-acqua.png",
+      "imagen": "img/kit-acqua.jpg",
       "descripcion": "Incluye Acqua Di Giò de 100ml y un gel de baño para cuerpo y cabello de 75ml.",
       "disponible": true
     },
@@ -283,7 +283,7 @@
       "precio": 2800,
       "categoria": "kits",
       "mililitros": 200,
-      "imagen": "src/media/productos/kit-eros.png",
+      "imagen": "img/kit-eros.jpg",
       "descripcion": "Incluye Versace Eros EDT de 100ml y un bálsamo para después de afeitar de 100ml.",
       "disponible": true
     },
@@ -294,7 +294,7 @@
       "precio": 3350,
       "categoria": "kits",
       "mililitros": 140,
-      "imagen": "src/media/productos/kit-black-opium.png",
+      "imagen": "img/kit-black-opium.jpg",
       "descripcion": "Incluye Black Opium de 90ml y una versión miniatura de bolso de 50ml.",
       "disponible": true
     },
@@ -305,7 +305,7 @@
       "precio": 2900,
       "categoria": "kits",
       "mililitros": 250,
-      "imagen": "src/media/productos/kit-invictus.png",
+      "imagen": "img/kit-invictus.jpg",
       "descripcion": "Incluye Invictus de 100ml y un shampoo para todo el cuerpo de 150ml.",
       "disponible": true
     },
@@ -316,7 +316,7 @@
       "precio": 3650,
       "categoria": "kits",
       "mililitros": 175,
-      "imagen": "src/media/productos/kit-jadore.png",
+      "imagen": "img/kit-jadore.png",
       "descripcion": "Incluye J'adore EDP de 100ml y una leche embellecedora corporal de 75ml.",
       "disponible": true
     },
@@ -327,7 +327,7 @@
       "precio": 2950,
       "categoria": "kits",
       "mililitros": 200,
-      "imagen": "src/media/productos/kit-212.png",
+      "imagen": "img/kit-212.jpg",
       "descripcion": "Incluye perfume 212 VIP de 100ml y un gel de ducha refrescante de 100ml.",
       "disponible": true
     },
@@ -338,7 +338,7 @@
       "precio": 3025,
       "categoria": "caballero",
       "mililitros": 100,
-      "imagen": "src/media/productos/212-men.png",
+      "imagen": "img/212-men.jpg",
       "descripcion": "Una fragancia pensada para el hombre sofisticado que saborea los mejores momentos de la vida.",
       "disponible": true
     }
