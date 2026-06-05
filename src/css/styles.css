@@ -422,3 +422,56 @@ footer p {
     border: 0;
     pointer-events: none; /* impide que el click en el video pause */
 }
+
+/* Banners de categorías*/
+
+/* Base del contenedor principal */
+.category-banner {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 50vh;
+}
+
+/* Modificadores para cargar la imagen correspondiente desde tu carpeta media */
+.banner-caballero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                      url('../media/categories/caballeros.jpg');
+}
+
+.banner-dama {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                      url('../media/categories/damas.jpg');
+}
+
+.banner-kits {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                      url('../media/categories/kits.jpg');
+}
+
+/* Tipografía fluida y espaciado premium para el título */
+.category-title {
+    font-size: calc(2.5rem + 4vw); 
+    letter-spacing: 0.3em; 
+    line-height: 1;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtítulo */
+.category-subtitle {
+    letter-spacing: 0.1em;
+}
+
+/* Divisor dorado minimalista (tomando el color de nuestra paleta refinada) */
+.category-divider {
+    width: 80px; 
+    height: 2px; 
+    background-color: #C5A059; /* Cambiado a dorado para mantener la identidad de lujo */
+    opacity: 0.8;
+}
+
+/* Descripción en cursiva */
+.category-description {
+    font-style: italic;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+}
