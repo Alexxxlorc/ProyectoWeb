@@ -454,11 +454,12 @@ footer p {
     font-size: calc(2.5rem + 4vw); 
     letter-spacing: 0.3em; 
     line-height: 1;
-    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 4px 10px rgba(242, 186, 82);
 }
 
 /* Subtítulo */
 .category-subtitle {
+    color: var(--vainilla);
     letter-spacing: 0.1em;
 }
 
@@ -473,5 +474,5 @@ footer p {
 /* Descripción en cursiva */
 .category-description {
     font-style: italic;
-    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+    text-shadow: 1px 2px 5px rgba(253, 234, 234, 0.4);
 }
